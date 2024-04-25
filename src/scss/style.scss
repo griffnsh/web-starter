@@ -1,5 +1,6 @@
-@use './partials/variables';
 @use './partials/reset';
+@use './partials/variables';
+@use './partials/mixins';
 @use './partials/components';
 @use './partials/media-queries';
 
