@@ -1,7 +1,10 @@
 @use './partials/reset';
 @use './partials/variables';
+@use './partials/layout';
 @use './partials/mixins';
 @use './partials/components';
 @use './partials/media-queries';
 
 h1 { color: red; }
+
+
