@@ -84,8 +84,29 @@ body {
   padding-inline: 16px;
 }
 
-h1 {
-  color: red;
+.navbar,
+.overlay {
+  display: none;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  padding-block: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+.header.active {
+  position: fixed;
+  background-color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
