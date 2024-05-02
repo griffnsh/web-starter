@@ -2,11 +2,10 @@
 @use '../abstracts/variables' as var;
 @use '../abstracts/typography' as typ;
 @use '../abstracts/animations' as ani;
-@use '../abstracts/media-queries' as mdq;
 
 header {
     width: 100%;
-    height: 8rem;
+    height: 5.5rem;
     background-color: #11101b;
     color: white;
     display: flex;
@@ -15,26 +14,23 @@ header {
     padding: 0 10rem;
 
     .header-logo {
-        font-size: 2rem;
+        font-size: 1rem;
         font-weight: bold;
     }
 }
-
-
 
 .hamburger {
     display: none;
 }
 
-.nav-bar {
-
-    .nav-list {
+.nav {
+    &-list {
         display: flex;
     }
 
-    .nav-item a {
+    &-item a {
         display: inline-block;
-        font-size: 2rem;
+        font-size: 1rem;
         padding: 1rem .5rem;
         margin: 0 1.5rem;
         // border-radius: 5rem;
@@ -61,3 +57,4 @@ header {
         transform-origin: bottom left;
       }
 }
+

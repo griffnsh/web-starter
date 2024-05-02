@@ -1,33 +1,20 @@
-// script.js
-const dropdownBtn = document.querySelectorAll(".dropdown-btn");
-const dropdown = document.querySelectorAll(".dropdown");
-const hamburgerBtn = document.getElementById("hamburger");
-const navMenu = document.querySelector(".menu");
-const links = document.querySelectorAll(".dropdown a");
+const burger = document.querySelector(".hamburger");
+const nav = document.querySelector(".nav");
+const navList = document.querySelector(".nav-list");
+const burgerBar = document.querySelectorAll(".hamburger-bar");
 
-function setAriaExpandedFalse() {
-    dropdownBtn.forEach((btn) => btn.setAttribute("aria-expanded", "false"));
-  }
-  
-  function closeDropdownMenu() {
-    dropdown.forEach((drop) => {
-      drop.classList.remove("active");
-      drop.addEventListener("click", (e) => e.stopPropagation());
-    });
-  }
-  
-  function toggleHamburger() {
-      navMenu.classList.toggle("show");
-      hamburgerBtn.setAttribute(
-          "aria-expanded",
-          hamburgerBtn.getAttribute("aria-expanded") === "false" ? "true" : "false"
-      );
-  }
+burger.addEventListener("click", toggle => {
+  nav.classList.toggle("active");
+  navList.classList.toggle("nav-active");
+  burgerBar.classList.toggle("bar-toggle")
+})
 
-  dropdownBtn.forEach((btn) => {
-    btn.addEventListener("click", function (e) {
-      const dropdownIndex = e.currentTarget.dataset.dropdown;
-      const dropdownElement = document.getElementById(dropdownIndex);
-      console.log(dropdownElement);
-    });
-  });
+// burgerBar.addEventListener("click", () => {
+//   console.log("test");
+// })
+
+function toggleHamburger() {
+ burgerBar.forEach(burgerBar => burgerBar.classList.toggle('hamburger-bar-toggle'))
+}
+
+burger.addEventListener('click', toggleHamburger)

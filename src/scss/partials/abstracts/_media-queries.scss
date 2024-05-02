@@ -2,9 +2,70 @@
 @use '../abstracts/variables' as var;
 @use '../abstracts/typography' as typ;
 @use '../abstracts/animations' as ani;
+@use '../components/navigation' as nav;
 
 @media only screen and (max-width: 1320px) {
     header {
-        width: 100%;
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .hamburger {
+        display: inline-block;
+        cursor: pointer;
+
+        &-bar {
+            width: 35px;
+            height: 3px;
+            background: #fff;
+            margin: 6px 0;
+            transition: ani.$trs-1;
+        }
+
+        &-bar-toggle:nth-of-type(1) {
+            transform: translate(1px, 4px) rotate(45deg);
+        }
+
+        &-bar-toggle:nth-of-type(2) { display: none; }
+
+        &-bar-toggle:nth-of-type(3) {
+            transform: translate(-1px, -4px) rotate(-45deg);
+        }
+    }
+
+    .nav {
+      position: absolute;
+      overflow: hidden;
+      height: 0;
+      top: 75px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background-color: #11101b;
+      transition: ani.$trs-1; 
+
+      &-list {
+        opacity: 0;
+        flex-direction: column;
+        display: block;
+        text-align: center;
+        transition: ani.$trs-2;
+      }
+    }
+
+    .active {
+        display: block;
+        height: 275px;
+    }
+
+    .nav-active {
+        opacity: 1;
     }
 }
