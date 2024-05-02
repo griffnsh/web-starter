@@ -1,0 +1,10 @@
+@use '../abstracts/reset';
+@use '../abstracts/variables' as var;
+@use '../abstracts/typography' as typ;
+@use '../abstracts/animations' as ani;
+
+@media only screen and (max-width: 1320px) {
+    header {
+        width: 100%;
+    }
+}
