@@ -46,7 +46,7 @@
       position: absolute;
       overflow: hidden;
       height: 0;
-      top: 75px;
+      top: 56px;
       left: 0;
       right: 0;
       width: 100vw;
@@ -60,13 +60,18 @@
         text-align: center;
         transition: ani.$trs-2;
       }
+
+      &-link {
+        top: 1rem;
+      }
     }
 
     
 
     .active {
         display: block;
-        height: 275px;
+        height: 200px;
+        border: 2px solid orangered;
     }
 
     .nav-active {

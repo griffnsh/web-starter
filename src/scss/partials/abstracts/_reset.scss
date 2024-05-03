@@ -1,6 +1,28 @@
 @use './variables' as var;
 @use './typography' as typ;
 
+// Color Scheme
+:root {
+  --grid-unit: 1rem;
+  --border-radius-base: 0.5rem;
+}
+
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-fg: #000000;
+}
+
+[data-theme="dark"] {
+  --color-bg: ##38434F;
+  --color-fg: ##F9F9F9;
+}
+
+/* example use of CSS custom properties */
+body {
+  background-color: var.$color-bg;
+  color: var.$color-fg
+}
+
 *,
 *::before,
 *::after {
@@ -55,7 +77,7 @@ html {
 }
 
 body {
-  background-color: #121212;
+  background-color: #2c2b2b;
 }
 
 ::-webkit-scrollbar { width: 10px; }

@@ -4,7 +4,7 @@ const navList = document.querySelector(".nav-list");
 const burgerBar = document.querySelectorAll(".hamburger-bar");
 const header = document.querySelector(".header")
 
-burger.addEventListener("click", toggle => {
+burger.addEventListener("click", () => {
   nav.classList.toggle("active");
   navList.classList.toggle("nav-active");
   burgerBar.classList.toggle("bar-toggle")
@@ -28,3 +28,6 @@ function stickyNav() {
     header.classList.remove("sticky");
   }
 }
+
+
+

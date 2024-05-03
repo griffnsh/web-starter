@@ -5,14 +5,15 @@
 
 header {
     width: 100%;
-    height: 5.5rem;
+    height: 4.0rem;
     background: #404040;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10rem;
+    padding: 0 5rem;
     transition: ani.$trs-2;
+
+    border: 2px solid red;
 
     .header-logo {
         font-size: 1rem;
@@ -42,12 +43,10 @@ header {
     &-item a {
         display: inline-block;
         font-size: 1rem;
-        padding: 1rem .5rem;
+        padding: .5rem .5rem;
         margin: 0 1.5rem;
-        // border-radius: 5rem;
-        // transition: ani.$trs-1;
-        // margin: 0 .5rem;
         position: relative;
+        // top: 1.5rem;
     }
 
     .nav-item a::after {
@@ -74,4 +73,5 @@ header {
         position: fixed;
         top: 0;
         width: 100%;
+        background: #404040;
     }
